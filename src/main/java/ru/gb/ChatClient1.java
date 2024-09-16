@@ -3,7 +3,7 @@ package ru.gb;
 import java.io.*;
 import java.net.*;
 
-public class ChatClient {
+public class ChatClient1 {
     public static void main(String[] args) {
         try (Socket socket = new Socket("localhost", 5555)) {
             System.out.println("Подключено к серверу!");

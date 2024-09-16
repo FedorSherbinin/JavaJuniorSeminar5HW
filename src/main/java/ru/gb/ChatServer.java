@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-public class ChatServer1 {
+public class ChatServer {
     private static Set<Socket> clientSockets = new HashSet<>();
 
     public static void main(String[] args) {
@@ -53,7 +53,7 @@ public class ChatServer1 {
                 while ((message = in.readLine()) != null) {
                     System.out.println("Сообщение от клиента: " + message);
                     // Рассылка сообщения всем остальным клиентам
-                    ChatServer1.broadcast(message, clientSocket);
+                    ChatServer.broadcast(message, clientSocket);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
